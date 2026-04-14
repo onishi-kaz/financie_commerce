@@ -203,7 +203,7 @@ html,body{background:#f0f0f0;font-family:'Noto Sans JP','Hiragino Sans',sans-ser
   <div class="community">
     <div class="comm-avatar" style="font-size:11px;letter-spacing:.05em">RC</div>
     <div>
-      <div class="comm-name">初期サポーター募集</div>
+      <div class="comm-name">初回販売</div>
       <div class="comm-sub">REAL COMMERCE</div>
     </div>
     <div class="comm-menu">⋮</div>
@@ -216,14 +216,14 @@ html,body{background:#f0f0f0;font-family:'Noto Sans JP','Hiragino Sans',sans-ser
     <div class="support-row">
       <div class="support-label">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-        サポート総額
+        販売総額
       </div>
       <div class="support-value">12,345,000 <span class="unit">円（pt）</span></div>
     </div>
     <div class="support-row">
       <div class="support-label">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        現在のサポート人数
+        購入者数
       </div>
       <div class="support-count">1,234 <span class="unit">名</span></div>
     </div>
@@ -231,7 +231,7 @@ html,body{background:#f0f0f0;font-family:'Noto Sans JP','Hiragino Sans',sans-ser
 
   <div class="help-row">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-    サポーター募集に関する詳細は<a class="help-link" href="#">ヘルプ</a>をご確認ください。
+    販売に関する詳細は<a class="help-link" href="#">ヘルプ</a>をご確認ください。
   </div>
 
 
@@ -551,6 +551,78 @@ html,body{background:#f0f0f0;font-family:'Noto Sans JP','Hiragino Sans',sans-ser
         </div>
       </div>
     </div>
+
+    <!-- 商品C -->
+    <div class="product-item" id="product-c">
+      <div class="product-item-header">
+        <div class="product-item-title">【３組限定】ホリエモンと会食 @WAGYUMAFIA</div>
+        <div class="product-sales-price">販売額：200,000 円（pt）</div>
+        <div class="product-limit-row">
+          <span class="product-limit-badge">お一人様 1口まで</span>
+          <span class="product-nokori">残り 3口</span>
+        </div>
+      </div>
+      <img class="product-thumb" src="SAMPLE_C.png" alt="ホリエモンと会食">
+      <div class="product-item-body">
+
+        <div class="preread-title">購入前にご一読ください</div>
+        <div class="more-toggle" onclick="toggleMore('c')">もっと見る <span id="more-icon-c">▼</span></div>
+        <div class="more-content" id="more-c">
+          <div class="free-text-block"><div class="free-text-placeholder">ここに説明テキストを入力できます</div></div>
+        </div>
+
+        <!-- 購入内容 -->
+        <div class="detail-section">
+          <div class="detail-2col">
+            <div class="detail-2col-label">購入内容</div>
+            <div class="detail-2col-body">
+              <ul class="detail-list">
+                <li>ホリエモンとの会食権 【販売額：200,000円(pt)】</li>
+                <li>20,000 円(pt)分のトークン(応援アイテム) ※購入特典</li>
+              </ul>
+            </div>
+          </div>
+          <p class="detail-note">※トークン＝応援の証です。<br>　限定コミュニティの参加権利にもなります。</p>
+        </div>
+
+        <!-- 注意事項 -->
+        <div class="detail-section">
+          <div class="detail-title">注意事項</div>
+          <div class="detail-body">
+            <p>本特典で取得したトークンは、ファンディング終了日に25%、その後、90日ごとに25%ずつが売却可能となります。</p>
+          </div>
+        </div>
+
+        <!-- 購入口数 -->
+        <div class="qty-row">
+          <span class="qty-label">購入口数</span>
+          <div class="qty-right">
+            <input class="qty-input" id="num-c" type="text" inputmode="numeric" value="" placeholder="口数を入力" oninput="updateQty('c')">
+            <span class="qty-unit">口</span>
+          </div>
+        </div>
+
+        <!-- 購入額 -->
+        <div class="qty-amount-row">
+          <span class="qty-amount-label">購入額</span>
+          <div class="qty-amount-right">
+            <div class="qty-amount-val" id="sub-c">0</div>
+            <span class="qty-amount-unit">円（pt）</span>
+          </div>
+        </div>
+
+        <!-- 購入履歴 -->
+        <div class="detail-section">
+          <div class="detail-title-row" onclick="toggleHistory('c')">
+            <span class="detail-title">購入履歴</span>
+            <span class="detail-arrow" id="hist-arrow-c">▼</span>
+          </div>
+          <div class="history-body" id="hist-c" style="display:none">
+            <p style="color:#aaa;text-align:center;padding:10px 0;font-size:12px">履歴がありません。</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="confirm-section" id="confirm-section" style="display:none">
@@ -569,6 +641,10 @@ html,body{background:#f0f0f0;font-family:'Noto Sans JP','Hiragino Sans',sans-ser
       <div class="confirm-row" id="confirm-row-b" style="display:none">
         <span class="confirm-key">商品B × <span id="conf-qb">0</span>口</span>
         <span class="confirm-val"><span id="conf-vb">0</span> 円（pt）</span>
+      </div>
+      <div class="confirm-row" id="confirm-row-c" style="display:none">
+        <span class="confirm-key">商品C × <span id="conf-qc">0</span>口</span>
+        <span class="confirm-val"><span id="conf-vc">0</span> 円（pt）</span>
       </div>
       <div class="confirm-total-row">
         <span class="confirm-total-key">合計</span>
@@ -589,15 +665,14 @@ html,body{background:#f0f0f0;font-family:'Noto Sans JP','Hiragino Sans',sans-ser
 </div>
 
 <script>
-const prices={a:12000,b:8000},maxQty={a:5,b:10};
-let qty={a:0,b:0},confirmOpen=false;
+const prices={a:12000,b:8000,c:200000},maxQty={a:5,b:10,c:1};
+let qty={a:0,b:0,c:0},confirmOpen=false;
 
 function updateQty(id){
   const input=document.getElementById('num-'+id);
   let v=parseInt(input.value)||0;
   v=Math.max(0,Math.min(v,maxQty[id]));
   qty[id]=v;
-  // 上限・下限を超えていたら入力欄に反映
   if(input.value!=='' && parseInt(input.value)!==v) input.value=v;
   const sub=v>0?v*prices[id]:0;
   document.getElementById('sub-'+id).textContent=sub>0?sub.toLocaleString():'0';
@@ -605,17 +680,20 @@ function updateQty(id){
 }
 
 function updateAll(){
-  const total=qty.a*prices.a+qty.b*prices.b,has=qty.a>0||qty.b>0;
+  const total=qty.a*prices.a+qty.b*prices.b+qty.c*prices.c,has=qty.a>0||qty.b>0||qty.c>0;
   document.getElementById('cta-total-disp').innerHTML=has?total.toLocaleString()+' <span class="cta-pt-unit">円（pt）</span>':'− <span class="cta-pt-unit">円（pt）</span>';
   document.getElementById('cta-view-btn').style.display=has?'none':'block';
   document.getElementById('cta-buy-btn').style.display=has?'block':'none';
   document.getElementById('confirm-section').style.display=has?'block':'none';
   document.getElementById('confirm-row-a').style.display=qty.a>0?'flex':'none';
   document.getElementById('confirm-row-b').style.display=qty.b>0?'flex':'none';
+  document.getElementById('confirm-row-c').style.display=qty.c>0?'flex':'none';
   document.getElementById('conf-qa').textContent=qty.a;
   document.getElementById('conf-qb').textContent=qty.b;
+  document.getElementById('conf-qc').textContent=qty.c;
   document.getElementById('conf-va').textContent=(qty.a*prices.a).toLocaleString();
   document.getElementById('conf-vb').textContent=(qty.b*prices.b).toLocaleString();
+  document.getElementById('conf-vc').textContent=(qty.c*prices.c).toLocaleString();
   document.getElementById('conf-total').textContent=total.toLocaleString()+' 円（pt）';
 }
 
