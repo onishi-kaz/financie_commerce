@@ -9,7 +9,7 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:#f0f0f0;font-family:'Noto Sans JP','Hiragino Sans',sans-serif;overflow-x:hidden}
-.wrap{max-width:390px;margin:0 auto;background:#fff;font-size:14px;color:#222;position:relative;padding-bottom:90px;min-height:100vh}
+.wrap{max-width:390px;margin:0 auto;background:#fff;font-size:14px;color:#222;position:relative;padding-bottom:90px;min-height:100vh;overflow-x:hidden}
 @media(min-width:600px){
   .wrap{max-width:600px}
   .cta-bar{max-width:600px}
@@ -64,22 +64,22 @@ html,body{background:#f0f0f0;font-family:'Noto Sans JP','Hiragino Sans',sans-ser
 .product-limit-badge{background:#e94b4b;color:#fff;font-size:12px;font-weight:700;padding:5px 12px;border-radius:4px;white-space:nowrap}
 .product-nokori{font-size:14px;font-weight:700;color:#e94b4b;white-space:nowrap}
 .product-item-body{padding:12px 14px}
-.more-toggle{display:flex;align-items:center;gap:4px;font-size:12px;color:#1da1f2;cursor:pointer;margin-top:6px;user-select:none}
+.more-toggle{display:block;text-align:center;font-size:12px;color:#1da1f2;cursor:pointer;margin-top:6px;user-select:none}
 .more-content{display:none;margin-top:10px;font-size:12px;color:#555;line-height:1.7;border-top:1px solid #f0f0f0;padding-top:10px}
 .more-content.open{display:block}
 /* 購入内容：2カラムレイアウト */
-.detail-2col{display:flex;gap:12px;align-items:flex-start}
-.detail-2col-label{font-size:13px;font-weight:700;color:#333;white-space:nowrap;min-width:60px;padding-top:1px}
-.detail-2col-body{flex:1;font-size:12px;color:#555;line-height:1.7}
+.detail-2col{display:flex;align-items:flex-start;gap:12px}
+.detail-2col-label{font-size:13px;font-weight:700;color:#333;white-space:nowrap;flex-shrink:0;padding-top:1px}
+.detail-2col-body{flex:1;font-size:12px;color:#555;line-height:1.7;text-align:right}
 /* 購入口数・購入額：左右両端揃え */
 .qty-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid #e5e5e5}
 .qty-label{font-size:13px;font-weight:700;color:#333}
-.qty-right{display:flex;align-items:center;gap:6px;min-width:160px;justify-content:flex-end}
+.qty-right{display:flex;align-items:center;gap:6px;justify-content:flex-end}
 .qty-input{width:120px;height:32px;text-align:right;border:1px solid #ddd;border-radius:4px;font-size:14px;font-weight:600;color:#222;padding:0 8px;background:#f5f5f5}
 .qty-unit{font-size:13px;color:#555;width:28px}
 .qty-amount-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5}
 .qty-amount-label{font-size:13px;font-weight:700;color:#333}
-.qty-amount-right{display:flex;align-items:center;gap:6px;min-width:160px;justify-content:flex-end}
+.qty-amount-right{display:flex;align-items:center;gap:6px;justify-content:flex-end}
 .qty-amount-val{width:120px;height:32px;text-align:right;border:1px solid #ddd;border-radius:4px;font-size:14px;font-weight:600;color:#222;padding:0 8px;background:#f5f5f5;display:flex;align-items:center;justify-content:flex-end}
 .qty-amount-unit{font-size:13px;color:#555;white-space:nowrap;width:28px}
 .confirm-section{margin:0 16px 16px;border:1px solid #e5e5e5;border-radius:6px;overflow:hidden}
@@ -95,7 +95,7 @@ html,body{background:#f0f0f0;font-family:'Noto Sans JP','Hiragino Sans',sans-ser
 .confirm-total-row{padding:10px 14px;background:#fff0f0;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #fecaca}
 .confirm-total-key{font-size:13px;font-weight:700;color:#e94b4b}
 .confirm-total-val{font-size:18px;font-weight:700;color:#e94b4b}
-.cta-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:600px;background:#fff;border-top:1px solid #e5e5e5;padding:10px 16px 24px;display:flex;align-items:center;gap:10px;z-index:100;box-shadow:0 -2px 8px rgba(0,0,0,.08)}
+.cta-bar{position:fixed;bottom:0;left:0;right:0;width:100%;max-width:600px;margin:0 auto;background:#fff;border-top:1px solid #e5e5e5;padding:10px 16px 24px;display:flex;align-items:center;gap:10px;z-index:100;box-shadow:0 -2px 8px rgba(0,0,0,.08)}
 .cta-info{flex:1}
 .cta-label{font-size:11px;color:#888;margin-bottom:1px}
 .cta-pt{font-size:18px;font-weight:700;color:#222;line-height:1.2}
@@ -109,7 +109,7 @@ html,body{background:#f0f0f0;font-family:'Noto Sans JP','Hiragino Sans',sans-ser
 .detail-arrow{font-size:11px;color:#aaa}
 .detail-body{font-size:12px;color:#555;line-height:1.7}
 .detail-list{padding-left:0;list-style:none}
-.detail-list li{padding:2px 0;padding-left:1em;text-indent:-1em}
+.detail-list li{padding:2px 0;white-space:nowrap;text-align:right}
 .detail-list li::before{content:"• ";color:#888}
 .detail-note{color:#888;font-size:11px;margin-top:6px}
 .history-body{font-size:12px}
@@ -177,7 +177,7 @@ html,body{background:#f0f0f0;font-family:'Noto Sans JP','Hiragino Sans',sans-ser
 .product-thumb-placeholder{width:100%;aspect-ratio:3/2;background:#f0f0f0;display:flex;align-items:center;justify-content:center;color:#bbb;font-size:13px;font-weight:700;letter-spacing:.08em;border-bottom:1px solid #e5e5e5}
 
 .check-list{list-style:none;padding:4px 24px 16px;margin:0 auto;display:table}
-.check-list li{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:700;color:#222;line-height:1.5;padding:10px 0;border-bottom:1px solid #f0f0f0}
+.check-list li{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:700;color:#222;line-height:1.5;padding:10px 0;border-bottom:1px solid #f0f0f0}
 .check-list li:last-child{border-bottom:none}
 .check-list li::before{content:"✓";color:#fff;background:#3b82f6;border-radius:50%;width:24px;height:24px;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 </style>
@@ -248,7 +248,7 @@ html,body{background:#f0f0f0;font-family:'Noto Sans JP','Hiragino Sans',sans-ser
       <ul class="check-list">
         <li>見事REALを獲得！有名料理人たちを唸らせた逸品。</li>
         <li>今だけの限定販売。初回限定の特別価格でご提供。</li>
-        <li>購入特典として今後の優待販売への参加権を付与。</li>
+        <li>購入特典として優待販売への参加権を付与。</li>
       </ul>
     </div>
 
@@ -423,7 +423,7 @@ html,body{background:#f0f0f0;font-family:'Noto Sans JP','Hiragino Sans',sans-ser
       <div class="product-item-body">
 
         <div class="preread-title">購入前にご一読ください</div>
-        <div class="more-toggle" onclick="toggleMore('a')"> もっと見る <span id="more-icon-a">▼</span></div>
+        <div class="more-toggle" onclick="toggleMore('a')">もっと見る</div>
         <div class="more-content" id="more-a">
           <div class="free-text-block"><div class="free-text-placeholder">ここに説明テキストを入力できます<br><br><br></div></div>
         </div>
@@ -437,9 +437,9 @@ html,body{background:#f0f0f0;font-family:'Noto Sans JP','Hiragino Sans',sans-ser
                 <li>極上サーモン堪能セット 【販売額：12,000円(pt)】</li>
                 <li>1200 円(pt)分のトークン(応援アイテム) ※購入特典</li>
               </ul>
-              <p class="detail-note">※トークン＝応援の証です。<br>　限定コミュニティの参加権利にもなります。</p>
             </div>
           </div>
+          <p class="detail-note">※トークン＝応援の証です。<br>　限定コミュニティの参加権利にもなります。</p>
         </div>
 
         <!-- 注意事項 -->
@@ -494,7 +494,7 @@ html,body{background:#f0f0f0;font-family:'Noto Sans JP','Hiragino Sans',sans-ser
       <div class="product-item-body">
 
         <div class="preread-title">購入前にご一読ください</div>
-        <div class="more-toggle" onclick="toggleMore('b')"> もっと見る <span id="more-icon-b">▼</span></div>
+        <div class="more-toggle" onclick="toggleMore('b')">もっと見る</div>
         <div class="more-content" id="more-b">
           <div class="free-text-block"><div class="free-text-placeholder">ここに説明テキストを入力できます<br><br><br></div></div>
         </div>
@@ -508,9 +508,9 @@ html,body{background:#f0f0f0;font-family:'Noto Sans JP','Hiragino Sans',sans-ser
                 <li>ニジマス塩焼きセット 【販売額：8,000円(pt)】</li>
                 <li>800 円(pt)分のトークン(応援アイテム) ※購入特典</li>
               </ul>
-              <p class="detail-note">※トークン＝応援の証です。<br>　限定コミュニティの参加権利にもなります。</p>
             </div>
           </div>
+          <p class="detail-note">※トークン＝応援の証です。<br>　限定コミュニティの参加権利にもなります。</p>
         </div>
 
         <!-- 注意事項 -->
